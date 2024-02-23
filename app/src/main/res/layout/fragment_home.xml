@@ -18,13 +18,23 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_air_24"
+                android:layout_centerVertical="true"
+                android:id="@+id/co2_icon"
+                app:tint="@color/main" />
+
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/eco2_head_tv"
                 style="@style/TextAppearance.Material3.TitleMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/co2_value_title"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/co2_icon"
+                android:layout_marginHorizontal="16dp"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/eco2_value_tv"
@@ -32,7 +42,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1234.52 ppm"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/eco2_head_tv"
+                android:textAlignment="textEnd"/>
 
         </RelativeLayout>
 
@@ -51,13 +63,23 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
+            <ImageView
+                android:id="@+id/temp_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/baseline_thermostat_24"
+                app:tint="@color/main"/>
+
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/temp_head_tv"
                 style="@style/TextAppearance.Material3.TitleMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/temp_value_title"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/temp_icon"
+                android:layout_marginHorizontal="16dp"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/temp_value_tv"
@@ -65,7 +87,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="25.2 С"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/temp_head_tv"
+                android:textAlignment="textEnd"/>
 
         </RelativeLayout>
 
@@ -84,13 +108,23 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_water_drop_24"
+                android:layout_centerVertical="true"
+                android:id="@+id/hum_icon"
+                app:tint="@color/main"/>
+
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/hum_head_tv"
                 style="@style/TextAppearance.Material3.TitleMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hum_value_title"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/hum_icon"
+                android:layout_marginHorizontal="16dp"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/hum_value_tv"
@@ -98,7 +132,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="52.2 %"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/hum_head_tv"
+                android:textAlignment="textEnd"/>
 
         </RelativeLayout>
 

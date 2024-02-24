@@ -40,18 +40,15 @@ class HomeFragment : Fragment() {
     }
 
     fun updateCO2(co2: Double) {
-        val formattedCo2Value = String.format("%.2f", co2)
-        binding.eco2ValueTv.text = getString(R.string.co2_value, formattedCo2Value)
-    }
-
-    fun updateTemp(temp: Double) {
-        val formattedTempValue = String.format("%.2f", temp)
-        binding.humValueTv.text = getString(R.string.temp_value, formattedTempValue)
+        binding.eco2ValueTv.text = getString(R.string.co2_value, co2)
     }
 
     fun updateHum(hum: Double) {
-        val formattedHumValue = String.format("%.2f", hum)
-        binding.humValueTv.text = getString(R.string.hum_value, formattedHumValue)
+        binding.humValueTv.text = getString(R.string.hum_value, hum)
+    }
+
+    fun updateTemp(temp: Double) {
+        binding.tempValueTv.text = getString(R.string.temp_value, temp)
     }
 
     override fun onDestroyView() {

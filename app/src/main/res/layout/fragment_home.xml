@@ -34,14 +34,14 @@
                 android:text="@string/co2_value_title"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@id/co2_icon"
-                android:layout_marginHorizontal="16dp"/>
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"/>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/eco2_value_tv"
                 style="@style/TextAppearance.Material3.HeadlineSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1234.52 ppm"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@id/eco2_head_tv"
                 android:textAlignment="textEnd"/>
@@ -86,7 +86,6 @@
                 style="@style/TextAppearance.Material3.HeadlineSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="25.2 С"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@id/temp_head_tv"
                 android:textAlignment="textEnd"/>
@@ -131,7 +130,6 @@
                 style="@style/TextAppearance.Material3.HeadlineSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="52.2 %"
                 android:layout_alignParentEnd="true"
                 android:layout_toEndOf="@id/hum_head_tv"
                 android:textAlignment="textEnd"/>

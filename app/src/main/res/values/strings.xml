@@ -6,4 +6,7 @@
     <string name="co2_value_title">Углекислый газ:</string>
     <string name="temp_value_title">Температура:</string>
     <string name="hum_value_title">Влажность:</string>
+    <string name="co2_value">%s ppm</string>
+    <string name="temp_value">%s °C</string>
+    <string name="hum_value">%s \%</string>
 </resources>

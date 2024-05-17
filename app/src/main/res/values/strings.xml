@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">Aerozor</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Главная</string>
+    <string name="title_notifications">Уведомления</string>
     <string name="co2_value_title">Углекислый газ:</string>
     <string name="temp_value_title">Температура:</string>
     <string name="hum_value_title">Влажность:</string>
     <string name="co2_value">%.2f ppm</string>
     <string name="temp_value">%.2f °C</string>
     <string name="hum_value">%.2f %%</string>
+    <string name="placeholder">---</string>
 </resources>

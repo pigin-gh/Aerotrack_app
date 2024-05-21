@@ -39,17 +39,17 @@ class HomeFragment : Fragment() {
         dataFetcher = DataFetcher(this)
     }
 
-//    fun updateCO2(co2: Double) {
-//        binding.eco2ValueTv.text = getString(R.string.co2_value, co2)
-//    }
-//
-//    fun updateHum(hum: Double) {
-//        binding.humValueTv.text = getString(R.string.hum_value, hum)
-//    }
-//
-//    fun updateTemp(temp: Double) {
-//        binding.tempValueTv.text = getString(R.string.temp_value, temp)
-//    }
+    fun updateCO2(co2: Double) {
+        binding.eco2ValueTv.text = getString(R.string.co2_value, co2)
+    }
+
+    fun updateHum(hum: Double) {
+        binding.humValueTv.text = getString(R.string.hum_value, hum)
+    }
+
+    fun updateTemp(temp: Double) {
+        binding.tempValueTv.text = getString(R.string.temp_value, temp)
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

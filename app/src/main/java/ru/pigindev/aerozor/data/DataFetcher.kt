@@ -41,11 +41,11 @@ class DataFetcher(private val fragment: HomeFragment) {
                     val tempResponse = apiService.getTemp()
                     val humResponse = apiService.getHumidity()
 
-//                    withContext(Dispatchers.Main) {
-//                        fragment.updateTemp(temp = tempResponse.value)
-//                        fragment.updateCO2(co2 = co2Response.value)
-//                        fragment.updateHum(hum = humResponse.value)
-//                    }
+                    withContext(Dispatchers.Main) {
+                        fragment.updateTemp(temp = tempResponse.value)
+                        fragment.updateCO2(co2 = co2Response.value)
+                        fragment.updateHum(hum = humResponse.value)
+                    }
 
                 } catch (e: Exception) {
                     Log.e("!!!!!!!!!!", "Error fetching number: ${e.message} ${e.stackTrace}")

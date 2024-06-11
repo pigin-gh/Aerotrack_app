@@ -32,7 +32,7 @@ class DataFetcher(private val fragment: HomeFragment) {
         fetchNumber()
     }
 
-    private fun fetchNumber() {
+    fun fetchNumber() {
         job = CoroutineScope(Dispatchers.IO).launch {
 
             while (isActive) {

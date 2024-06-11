@@ -1,172 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment"
-    android:paddingHorizontal="16dp">
+    android:orientation="vertical"
+    android:id="@+id/swipeRefresh">
 
-    <com.google.android.material.card.MaterialCardView
-        style="@style/Widget.Material3.CardView.Filled"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/co2_card"
-        android:layout_marginTop="16dp">
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp">
 
-        <RelativeLayout
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Filled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:id="@+id/co2_card"
+            android:layout_marginTop="16dp">
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/baseline_air_24"
-                android:layout_centerVertical="true"
-                android:id="@+id/co2_icon"
-                app:tint="@color/main" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/eco2_head_tv"
-                style="@style/TextAppearance.Material3.TitleMedium"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/co2_value_title"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@id/co2_icon"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="8dp"/>
+                android:padding="16dp">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/eco2_value_tv"
-                style="@style/TextAppearance.Material3.HeadlineSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@id/eco2_head_tv"
-                android:textAlignment="textEnd"
-                android:text="420 ppm"/>
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/baseline_air_24"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/co2_icon"
+                    app:tint="@color/main" />
 
-        </RelativeLayout>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/eco2_head_tv"
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/co2_value_title"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/co2_icon"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"/>
 
-    </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/eco2_value_tv"
+                    style="@style/TextAppearance.Material3.HeadlineSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/eco2_head_tv"
+                    android:textAlignment="textEnd"
+                    android:text="420 ppm"/>
 
-    <com.google.android.material.card.MaterialCardView
-        style="@style/Widget.Material3.CardView.Filled"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:id="@+id/temp_card"
-        android:layout_below="@id/co2_card">
+            </RelativeLayout>
 
-        <RelativeLayout
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Filled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:layout_marginTop="16dp"
+            android:id="@+id/temp_card"
+            android:layout_below="@id/co2_card">
 
-            <ImageView
-                android:id="@+id/temp_icon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/baseline_thermostat_24"
-                app:tint="@color/main"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/temp_head_tv"
-                style="@style/TextAppearance.Material3.TitleMedium"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/temp_value_title"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@id/temp_icon"
-                android:layout_marginHorizontal="16dp"/>
+                android:padding="16dp">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/temp_value_tv"
-                style="@style/TextAppearance.Material3.HeadlineSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@id/temp_head_tv"
-                android:textAlignment="textEnd"
-                android:text="25.4 °C"/>
+                <ImageView
+                    android:id="@+id/temp_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_thermostat_24"
+                    app:tint="@color/main"/>
 
-        </RelativeLayout>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/temp_head_tv"
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/temp_value_title"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/temp_icon"
+                    android:layout_marginHorizontal="16dp"/>
 
-    </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/temp_value_tv"
+                    style="@style/TextAppearance.Material3.HeadlineSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/temp_head_tv"
+                    android:textAlignment="textEnd"
+                    android:text="25.4 °C"/>
 
-    <com.google.android.material.card.MaterialCardView
-        style="@style/Widget.Material3.CardView.Filled"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:id="@+id/hum_card"
-        android:layout_below="@id/temp_card">
+            </RelativeLayout>
 
-        <RelativeLayout
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Filled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:layout_marginTop="16dp"
+            android:id="@+id/hum_card"
+            android:layout_below="@id/temp_card">
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:src="@drawable/baseline_water_drop_24"
-                android:layout_centerVertical="true"
-                android:id="@+id/hum_icon"
-                app:tint="@color/main"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/hum_head_tv"
-                style="@style/TextAppearance.Material3.TitleMedium"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/hum_value_title"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@id/hum_icon"
-                android:layout_marginHorizontal="16dp"/>
+                android:padding="16dp">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/hum_value_tv"
-                style="@style/TextAppearance.Material3.HeadlineSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@id/hum_head_tv"
-                android:textAlignment="textEnd"
-                android:text="52%"/>
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/baseline_water_drop_24"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/hum_icon"
+                    app:tint="@color/main"/>
 
-        </RelativeLayout>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/hum_head_tv"
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hum_value_title"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/hum_icon"
+                    android:layout_marginHorizontal="16dp"/>
 
-    </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/hum_value_tv"
+                    style="@style/TextAppearance.Material3.HeadlineSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/hum_head_tv"
+                    android:textAlignment="textEnd"
+                    android:text="52%"/>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Совет от нейросети YandexGPT:"
-        style="@style/TextAppearance.Material3.TitleLarge"
-        android:layout_below="@id/hum_card"
-        android:layout_marginTop="16dp"
-        android:id="@+id/yandex"/>
+            </RelativeLayout>
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/yandex"
-        style="@style/Widget.Material3.CardView.Outlined"
-        app:strokeColor="@color/main"
-        app:strokeWidth="4dp"
-        android:layout_marginTop="8dp"
-        android:id="@+id/gpt_card">
+        </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.textview.MaterialTextView
-            style="@style/TextAppearance.Material3.BodyLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="На основе представленных данных, уровень углекислого газа часто превышает границу. Для улучшения ситуации рекомендуется срочно обеспечить хорошую вентиляцию, чтобы снизить сонливость" />
+            android:text="Совет от нейросети YandexGPT:"
+            style="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_below="@id/hum_card"
+            android:layout_marginTop="16dp"
+            android:id="@+id/yandex"/>
 
-    </com.google.android.material.card.MaterialCardView>
-</RelativeLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/yandex"
+            style="@style/Widget.Material3.CardView.Outlined"
+            app:strokeColor="@color/main"
+            app:strokeWidth="4dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/gpt_card">
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="На основе представленных данных, уровень углекислого газа часто превышает границу. Для улучшения ситуации рекомендуется срочно обеспечить хорошую вентиляцию, чтобы снизить сонливость" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

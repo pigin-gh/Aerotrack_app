@@ -37,6 +37,9 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         dataFetcher = DataFetcher(this)
+        binding.swipeRefresh.setOnRefreshListener {
+            dataFetcher.fetchNumber()
+        }
     }
 
     fun updateCO2(co2: Double) {

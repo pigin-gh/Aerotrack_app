@@ -12,7 +12,7 @@ class DataFetcher(private val fragment: HomeFragment) {
 
     private val apiService: ApiService
 
-    private var job: Job? = null
+    private var job: Job? = null;
 
     init {
         val httpClient: OkHttpClient = OkHttpClient.Builder()
